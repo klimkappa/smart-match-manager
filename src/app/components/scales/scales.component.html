@@ -1,0 +1,27 @@
+<div class="main_">
+
+        <div class="title">
+                <p>Масштаби</p>
+                <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="createNewScaleDialogOpen()">
+                        <mat-icon matTooltip="Додати масштаб">note_add</mat-icon>
+                </button>
+        </div>
+
+        <div class="scales">
+
+                <div class="scale" (click)="ScaleNavigate(1)" *ngFor="let scale of scalesResponse?.data">
+                        <p> {{scale.title}}</p>
+                        <p>{{scale.description}}</p>
+                        <p>{{scale.uid}}</p>
+                        <!-- </div>
+        <div class="scale" (click)="ScaleNavigate(2)">
+                scale title 2
+        </div>
+        <div class="scale" (click)="ScaleNavigate(3)">
+                scale title 3
+        </div>
+        <div class="scale" (click)="ScaleNavigate(4)">
+                scale title 4
+        </div> -->
+                </div>
+        </div>
