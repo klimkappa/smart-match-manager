@@ -11,5 +11,5 @@ export class CreateScaleDialogComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

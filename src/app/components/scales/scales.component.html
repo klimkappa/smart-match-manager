@@ -9,7 +9,7 @@
 
         <div class="scales">
 
-                <div class="scale" (click)="ScaleNavigate(1)" *ngFor="let scale of scalesResponse?.data">
+                <div class="scale" (click)="ScaleNavigate(scale.uid)" *ngFor="let scale of scalesResponse?.data">
                         <p> {{scale.title}}</p>
                         <p>{{scale.description}}</p>
                         <p>{{scale.uid}}</p>

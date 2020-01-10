@@ -14,6 +14,9 @@ export class NavigateService {
   }
 
 
-
+  GetRouteID(){
+    //  console.log('current route id',this.router.url.slice(7));
+     return this.router.url.slice(7);
+  }
 
 }
