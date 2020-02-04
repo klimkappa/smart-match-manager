@@ -2,26 +2,30 @@
 
         <div class="title">
                 <p>Масштаби</p>
-                <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="createNewScaleDialogOpen()">
-                        <mat-icon matTooltip="Додати масштаб">note_add</mat-icon>
-                </button>
+                <div class="button__add">
+                        <button mat-button (click)="createNewScaleDialogOpen()">
+                                Додати
+                        </button>
+                </div>
         </div>
 
         <div class="scales">
 
-                <div class="scale" (click)="ScaleNavigate(scale.uid)" *ngFor="let scale of scalesResponse?.data">
-                        <p> {{scale.title}}</p>
-                        <p>{{scale.description}}</p>
-                        <p>{{scale.uid}}</p>
-                        <!-- </div>
-        <div class="scale" (click)="ScaleNavigate(2)">
-                scale title 2
-        </div>
-        <div class="scale" (click)="ScaleNavigate(3)">
-                scale title 3
-        </div>
-        <div class="scale" (click)="ScaleNavigate(4)">
-                scale title 4
-        </div> -->
+                <div class="scale" *ngFor="let scale of scalesResponse?.data">
+                        <div class="scale__title" (click)="ScaleNavigate(scale.uid)">
+                                <p> {{scale.title}}</p>
+                        </div>
+                        <div class="scale__actions">
+                                <button>
+                                        <i class="material-icons">
+                                                edit
+                                                </i>
+                                </button>
+                                <button>
+                                        <i class="material-icons">
+                                                delete
+                                                </i>
+                                </button>
+                        </div>
                 </div>
         </div>

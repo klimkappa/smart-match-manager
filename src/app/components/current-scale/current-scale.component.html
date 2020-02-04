@@ -1,18 +1,23 @@
-
-
 <div class="main_">
     <div class="left_side">
-        <p class="title">judje queue</p>
-        <div class="judjes_queue">
-            <p> judje full name 1</p>
-            
+        <div class="side__header">
+            <button class="title">Судді</button>
+            <button class="side__add__btn">+</button>
+        </div>
+        <div class="judjes_list">
+            <div class="judjes_element">
+                <p>judje full name 1</p>
+            </div>
         </div>
     </div>
     <div class="right_side">
-        <p class="title">matches</p>
-        <div class="matches_queue">
-            <div class="match" *ngFor="let match of currentScaleResponse?.data?.matches">
-                {{match.title}}
+        <div class="side__header">
+            <button class="title">Матчі</button>
+            <button class="side__add__btn">+</button>
+        </div>
+        <div class="matches_list">
+            <div class="match">
+                <p>judje full name 1</p>
             </div>
         </div>
     </div>

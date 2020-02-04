@@ -1,4 +1,27 @@
-<div class="main_">
-  <p *ngFor="let judje of allJudjesResponse?.data">{{judje.full_name}}</p>
 
-</div>
+<div class="main_">
+
+  <div class="title">
+    <p>Масштаби</p>
+    <div class="button__add">
+      <button mat-button (click)="createNewScaleDialogOpen()">
+        Додати
+      </button>
+    </div>
+  </div>
+
+  <div class="judjes">
+
+    <div class="judje" *ngFor="let judje of allJudjesResponse?.data">
+      <div class="judje__title">
+        <p>{{judje.full_name}}</p>
+      </div>
+      <div class="judje__actions">
+        <button>
+          <i class="material-icons">
+            delete
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>

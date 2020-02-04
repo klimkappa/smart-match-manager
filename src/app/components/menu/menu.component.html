@@ -1,8 +1,10 @@
 <div class="main_">
 
 
-<button mat-button [routerLink]="['/scales']"><p>Всі масштаби</p></button>
-<button mat-button [routerLink]="['/judjes']"><p>Всі судді</p></button>
-<button mat-button [routerLink]="['/matches']"><p>Всі матчі</p></button>
+    <div class="button__wrapper">
+        <button mat-button [routerLink]="['/scales']" routerLinkActive = 'active__btn'>Масштаби</button>
+        <button mat-button [routerLink]="['/judjes']" routerLinkActive = 'active__btn'>Судді</button>
+        <button mat-button [routerLink]="['/matches']" routerLinkActive = 'active__btn'>Матчі</button>
+    </div>
 
 </div>
